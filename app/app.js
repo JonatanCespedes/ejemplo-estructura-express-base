@@ -5,8 +5,18 @@ const PORT = 3000;
 
 app.use(express.static("public"));
 
+/* HOME */
 app.get("/", (req, res) => {
    return res.sendFile(path.join(__dirname, "/views/home.html"));
+})
+
+/* CARRITO */
+app.get("/carrito", (req, res) => {
+   return res.sendFile(path.join(__dirname, "/views/carrito.html"));
+})
+/* DETALLE */
+app.get("/detalle", (req, res) => {
+   return res.sendFile(path.join(__dirname, "/views/detalle.html"));
 })
 
 app.listen(PORT, () => console.log(`
